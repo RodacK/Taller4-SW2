@@ -2,7 +2,7 @@
 
 module.controller('MateriaCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
         //listar
-        $scope.lista = materias;
+        $scope.lista = estudiantes;
         $scope.datosFormulario = {};
         $scope.panelEditar = false;
 
@@ -15,7 +15,7 @@ module.controller('MateriaCtrl', ['$scope', '$filter', '$http', function ($scope
         $scope.guardar = function () {
             var index = $scope.lista.indexOf($scope.datosFormulario);
             if (index === -1) {
-                $scope.datosFormulario.id=idMateria++;
+                $scope.datosFormulario.id=idEstudiante++;
                 $scope.lista.push($scope.datosFormulario);
             }
             $scope.panelEditar = false;

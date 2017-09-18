@@ -1,6 +1,6 @@
 <div class="btn-group">
-    <button type="button" class="btn btn-default" ng-click="nuevo()">Nuevo Profesor</button>
-    <button type="button" class="btn btn-default" ng-click="cancelar()">Listar Profesores</button>
+    <button type="button" class="btn btn-default" ng-click="nuevo()">Nueva Materia</button>
+    <button type="button" class="btn btn-default" ng-click="cancelar()">Listar Materias</button>
 </div>
 
 <div class="panel panel-primary" ng-hide="panelEditar">
@@ -12,23 +12,28 @@
                     nombre
                 </th>
                 <th>
-                    apellido
+                    apellidos
                 </th>
                 <th>
-                    Documento
+                    codigo
                 </th>
                 <th>
-                    Materia
+                    documento
                 </th>
                 <th>
+                    fecha Nacimiento
+                </th>
+                <th>
+                    Municipio
+                </th>
                     &nbsp;
                 </th>
             </tr>
             <tr ng-repeat="row in lista">
                 <td class="row">{{row.nombre}}</td>
-                <td class="row">{{row.apellidos}}</td>  
+                <td class="row">{{row.apellido}}</td>
+                <td class="row">{{row.codigo}}</td>
                 <td class="row">{{row.documento}}</td>
-                <td class="row">{{row.materia.nombre}}</td>  
                 <td class="row">
                     <button type="button" class="btn btn-default" ng-click="editar(row)">
                         <span class="glyphicon glyphicon-pencil"></span>Editar
@@ -60,34 +65,13 @@
             </div> 
             <div class="row">
                 <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
-                    <label>Apellido</label>
+                    <label>Creditos</label>
                     <input id="nombre" 
                            class="form-control" 
-                           type="text"
-                           ng-model="datosFormulario.apellidos"
+                           type="number"
+                           ng-model="datosFormulario.creditos"
                            placeholder="nombre"/>
-                    <div ng-show="errores.apellidos">{{errores.apellidos}}</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
-                    <label>Documento</label>
-                    <input id="nombre" 
-                           class="form-control" 
-                           type="text"
-                           ng-model="datosFormulario.documento"
-                           placeholder="nombre"/>
-                    <div ng-show="errores.apellidos">{{errores.apellidos}}</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
-                    <label>materia</label>
-                    <select id="facultad" class="form-control" 
-                            ng-model="datosFormulario.materia"
-                            ng-options="option.nombre for option in listaMaterias track by option.id">
-                    </select>
-                    <div ng-show="errores.facultad">{{errores.facultad}}</div>
+                    <div ng-show="errores.creditos">{{errores.creditos}}</div>
                 </div>
             </div>
             <div class="btn-group">

@@ -4,7 +4,7 @@ var facultades=[
     {"id":2, "nombre":"Licenciatura"}
 
 ];
-var idCarrera=1;
+var idCarrera=2;
 var carreras=[
      {"id":1, "nombre":"Ingenieria de Sistemas y Computacion"},
 ];
@@ -23,7 +23,12 @@ var profesores=[
     {"id":1, "nombre":"Mariana", "apellidos":"Correa", "documento":"1049651767"},
 ];
 
-var idMaterias=4;
+var idMateria=2;
 var materias=[
     {"id":1, "nombre":"Software II", "creditos":"4",},
+];
+
+var idEstudiante=2;
+var estudiantes=[
+    {"id":1, "nombre":"Diego", "apellido":"Torres", "codigo":"6265698", "documento":"77777777"},
 ];
